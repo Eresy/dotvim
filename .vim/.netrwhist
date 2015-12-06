@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/eresia/.vim/ftdetect'
+let g:netrw_dirhist_2='/home/eresia/.vim/ftplugin'
+let g:netrw_dirhist_3='/home/eresia/uni/DB/postgresql/udf-trigger-esempio'
+let g:netrw_dirhist_4='/home/eresia/.vim/ftdetect'
+let g:netrw_dirhist_5='/home/eresia/uni/LC1/LC1Project/ProgettoLC1 parte1 Gruppo 14/es1'
