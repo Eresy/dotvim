@@ -42,8 +42,8 @@ endif
 "use pgsql syntax also for .sql files
 let g:sql_type_default = 'pgsql'
 
-set concealcursor=nc
-set conceallevel=1
+"set concealcursor=nc
+"set conceallevel=1
 
 set wildmenu
 
