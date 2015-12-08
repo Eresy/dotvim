@@ -1,71 +1,11 @@
 " Vim color file
-" Mantainer Marco Bucchiarone
-" Last Modified 20111130
+" Mantainer: Marco Bucchiarone
+" Last Modified: 2011-11-30
 
 " cool help screens
 " :he group-name
 " :he highlight-groups
 " :he cterm-colors
-"
-"
-" Here starts the ripoff from ir_black (http://blog.infinitered.com)
-" ********************************************************************************
-" Standard colors used in all ir_black themes:
-" Note, x:x:x are RGB values
-"
-"  normal: #f6f3e8
-" 
-"  string: #A8FF60  168:255:96                   
-"    string inner (punc, code, etc): #00A0A0  0:160:160
-"  number: #FF73FD  255:115:253                 
-"  comments: #7C7C7C  124:124:124
-"  keywords: #96CBFE  150:203:254             
-"  operators: white
-"  class: #FFFFB6  255:255:182
-"  method declaration name: #FFD2A7  255:210:167
-"  regular expression: #E9C062  233:192:98
-"    regexp alternate: #FF8000  255:128:0
-"    regexp alternate 2: #B18A3D  177:138:61
-"  variable: #C6C5FE  198:197:254
-"  
-" Misc colors:
-"  red color (used for whatever): #FF6C60   255:108:96 
-"     light red: #FFB6B0   255:182:176
-"
-"  brown: #E18964  good for special
-"
-"  lightpurpleish: #FFCCFF
-" 
-" Interface colors:
-"  background color: black
-"  cursor (where underscore is used): #FFA560  255:165:96
-"  cursor (where block is used): white
-"  visual selection: #1D1E2C  
-"  current line: #151515  21:21:21
-"  search selection: #07281C  7:40:28
-"  line number: #3D3D3D  61:61:61
-
-
-" ********************************************************************************
-" The following are the preferred 16 colors for your terminal
-"           Colors      Bright Colors
-" Black     #4E4E4E     #7C7C7C
-" Red       #FF6C60     #FFB6B0
-" Green     #A8FF60     #CEFFAB
-" Yellow    #FFFFB6     #FFFFCB
-" Blue      #96CBFE     #B5DCFE
-" Magenta   #FF73FD     #FF9CFE
-" Cyan      #C6C5FE     #DFDFFE
-" White     #EEEEEE     #FFFFFF
-
-
-" ********************************************************************************
-set background=dark
-hi clear
-
-if exists("syntax_on")
-  syntax reset
-endif
 
 
 "							*cterm-colors*
@@ -90,7 +30,16 @@ endif
 "
 "
 
-let colors_name = "marco"
+set background=dark
+if version > 580
+    " no guarantees for version 5.8 and below, but this makes it stop
+    " complaining
+    hi clear
+    if exists("syntax_on")
+	syntax reset
+    endif
+endif
+let g:colors_name="marco"
 
 " color terminal definitions
 hi SpecialKey    ctermfg=darkgreen
@@ -99,7 +48,7 @@ hi Directory     ctermfg=darkcyan
 hi ErrorMsg      cterm=bold ctermfg=7 ctermbg=1
 hi IncSearch     cterm=NONE ctermfg=yellow ctermbg=green
 " hi Search        cterm=NONE ctermfg=grey ctermbg=blue
-hi Search        ctermfg=0 ctermbg=yellow cterm=bold 
+hi Search        ctermfg=0 ctermbg=6 cterm=bold 
 hi MoreMsg       ctermfg=darkgreen
 hi ModeMsg       cterm=bold ctermfg=darkred
 hi LineNr        ctermfg=3
@@ -121,7 +70,7 @@ hi DiffText      cterm=bold ctermbg=1
 hi Comment       ctermfg=cyan
 hi Constant      ctermfg=red
 hi Special       ctermfg=5 cterm=bold
-hi Identifier    ctermfg=yellow
+hi Identifier    ctermfg=6
 hi Statement     ctermfg=3 cterm=bold
 hi PreProc       ctermfg=5 cterm=bold
 hi Type          ctermfg=2 cterm=bold
