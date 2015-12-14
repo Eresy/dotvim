@@ -14,17 +14,15 @@ set ffs=unix,dos,mac "Default file types
 
 set history=10000	" keep 10000 lines of command line history
 set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set showmatch "Show matching bracets when text indicator is over them
+set showcmd		" Display incomplete commands
+set wildmenu		" and make simpler to cycle between them
+set showmatch		" Show matching bracets when text indicator is over them
 
-"execute pathogen#infect()
-"let g:no_haskell_conceal = 1
-"let hscoptions="tBhM"
+" execute pathogen#infect()
+
 syntax on
 
-"default colorscheme
-"colorscheme jellybeans
-
+" 
 if &diff
 	colorscheme jellybeans
 else
@@ -33,11 +31,12 @@ colorscheme candycode
 autocmd FileType c colorscheme marco
 autocmd FileType tex colorscheme marco
 autocmd FileType haskell colorscheme HaskColors
-
 endif
 "
 "autocmd FileType haskell setlocal  expandtab softtabstop=4 shiftwidth=4 shiftround  
 "au BufWinEnter,BufRead,BufNewFile *.hs set filetype=haskell
+
+autocmd BufReadPre $HOME/.xmobarrc set ft=haskell
 
 "use pgsql syntax also for .sql files
 let g:sql_type_default = 'pgsql'
@@ -45,15 +44,7 @@ let g:sql_type_default = 'pgsql'
 "set concealcursor=nc
 "set conceallevel=1
 
-set wildmenu
-
 filetype plugin indent on
-"colorscheme marco
-"
-"  Enabling Latex-suite addon
-
-"let g:tex_flavor='tex'
-
 
 "  C indenting option
 
